@@ -11,6 +11,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Debug - check files
+        run: |
+          pwd
+          ls -la
+          echo "--- Dockerfile content ---"
+          cat Dockerfile
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
